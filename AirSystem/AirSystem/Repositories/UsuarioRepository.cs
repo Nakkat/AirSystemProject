@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 public class UsuarioRepository
 {
@@ -22,8 +23,8 @@ public class UsuarioRepository
             usuarios.Add(new Usuario
             {
                 ID = 1,
-                Nome = "Erik",
-                Sobrenome = "Vitelli"
+                nome = "Erik",
+                sobrenome = "Vitelli"
             }
            );
             contador++;
@@ -31,7 +32,7 @@ public class UsuarioRepository
             {
                 ID = 2,
                 nome = "Bruno",
-                Sobrenome = "Nakamura"
+                sobrenome = "Nakamura"
             }
             );
             contador++;
@@ -58,12 +59,12 @@ public class UsuarioRepository
         // Lambda é uma ação anonima para aplicar uma regra
 
         // pegar a posição o objeto dentro da lista
-        Usuario u = usuarios.Find(x => x.codigo == usuario.codigo);
+        Usuario u = usuarios.Find(x => x.ID == usuario.ID);
         usuarios[usuarios.IndexOf(u)] = usuario;
     }
 
     // Remove dados da lista
-    public void deletar(int codigo)
+    public void deletar(int ID)
     {
         // Recupero o usuário atraves do código
         Usuario usuario = usuarios.Find(x => x.ID == ID);

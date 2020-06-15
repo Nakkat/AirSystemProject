@@ -1,6 +1,5 @@
 ﻿using System;
-using AirSystem.Models;
-using AirSystem.Repositories;
+using AirSystem.Utils;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Drawing.Text;
 
 namespace AirSystem.Views
 {
@@ -23,23 +23,8 @@ namespace AirSystem.Views
         public NovoUsuario(Usuario usuario)
         {
             InitializeComponent();
-
-            this.usuario = usuario;
         }
 
-        private void NovoUsuario_Load(object sender, EventArgs e)
-        {
-            if (usuario != null)
-            {
-                nomeTextBox.Text = usuario.nome;
-                sobrenomeTextBox = usuario.sobrenome;
-                enderecoTextBox.Text = usuario.endereco;
-                numTextBox.Text = usuario.numero;
-                usuarioTextBox.Text = usuario.usuario;
-                senhaTextBox = usuario.senha;
-                confirmarSenhaTextBox = usuario.confirmarSenha;
-            }
-        }
 
         private void btnSelecionar_Click(object sender, EventArgs e)
         {
@@ -54,71 +39,70 @@ namespace AirSystem.Views
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void NovoUsuario_Load(object sender, EventArgs e)
         {
-            if (!Utils.temCamposVazio(this))
-            //8. Armazena os dados do novo usuário nas propriedades da classe e carrega na lista (para alimentar o datagrid)
-            //instanciar a classe UsuarioRepository onde estão criados os métodos de acesso aos dados
-
+            if (Login.idioma == 0)
             {
-                UsuarioRepository repository = new UsuarioRepository();
-                if (this.usuario == null)
-                {
-                    //Atribui nas propriedades da classe usuários os valores dos campos do formulário
-                    Usuario usuario = new Usuario
-                    {
-                        nome = nomeTextBox.Text,
-                        sobrenome = sobrenomeTextBox.Text,
-                        endereco = enderecoTextBox.Text,
-                        numero = numTextBox.Text,
-                        usuario = usuarioTextBox.Text,
-                        senha = senhaTextBox.Text,
-                        confirmarSenha = confirmarSenhaTextBox.Text
-                };
-                    //chama o método adicionar - passando a classe usuario
-                    repository.adicionar(usuario);
-
-                    //Todos os campos foram preenchidos - Salva os campos no BD
-                    MessageBox.Show("Dados Salvos.",
-                                    "Aviso", MessageBoxButtons.OK,
-                                     MessageBoxIcon.Information);
-
-                }
-                else
-                {
-                    //alimenta as propriedades da classe com o conteúdo dos campos do formulário
-
-                    this.usuario.nome = nomeTextBox.Text;
-                    this.usuario.sobrenome = sobrenomeTextBox.Text;
-                    this.usuario.endereco = enderecoTextBox.Text;
-                    this.usuario.numero = numTextBox.Text;
-                    this.usuario.usuario = usuarioTextBox.Text;
-                    this.usuario.senha = "1234";
-                    this.usuario.confirmarSenha = "1234";
-                }
-                this.Close();
-
+                MessageBox.Show("INGLÊS");
             }
             else
-            {   //Texto , Título, Botões, Ícone
-                MessageBox.Show("Todos os campos são obrigatórios.",
-                                "Aviso", MessageBoxButtons.OK,
-                                 MessageBoxIcon.Information);
+            {
+                MessageBox.Show("PORTUGUÊS");
             }
-
-           
         }
-        bool isValidSenha;
-        private void senhaTextBox_TextChanged(object sender, EventArgs e)
-        {
-            //cria um padrão regex
-            string pattern = "[a-z]{3,}[.][a-z]{3,}[@][a-z]{3,}[.][a-z]{2,3}";
-            //seta uma propriedade com a verificação do regex
-            isValidSenha = Regex.IsMatch(senhaTextBox.Text, pattern);
-            //Altera a visualização da label
-            lblSenhaValida.Visible = false;
 
+        private bool isPasswordRight(string password)
+        {
+            if (password.Length >= 8)
+            {
+                // Tem pelo menos uma letra minúscula
+                string pattern = "[a-z]{1,}";
+                if (Regex.IsMatch(password, pattern))
+                {
+                    // Tem ao menos uma letra maiúscula
+                    pattern = "[A-Z]{1,}";
+                }
+                if (Regex.IsMatch(password, pattern))
+                {
+                    // Tem ao menos um número
+                    pattern = "[0-9]{1,}";
+                    if (Regex.IsMatch(password, pattern))
+                    {
+                        return true;
+                    }
+                }
+
+            }
+            return false;
+        }
+
+        private void Inputs_Enter(object sender, EventArgs e)
+        {
+            TextBox txt = sender as TextBox;
+            if (txt != null)
+            {
+                txt.BackColor = Color.LightYellow;
+                if (txt.Text=="")
+                {
+                    txt.Text = "Digite seu " + txt.AccessibleName;
+                }
+            }
+        }
+        private void Inputs_Leave(object sender, EventArgs e)
+        {
+            TextBox txt = sender as TextBox;
+            if (txt != null)
+            {
+                txt.BackColor = Color.White;
+                string value = txt.Text;
+                if (value.Substring(0,10) == "Digite seu")
+                {
+                    txt.Text = "";
+                }
+            }
         }
     }
 }
-
+        
+    
+   

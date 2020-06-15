@@ -32,8 +32,8 @@
             System.Windows.Forms.Label label1;
             System.Windows.Forms.Label label2;
             System.Windows.Forms.Label label3;
-            System.Windows.Forms.Label label4;
-            System.Windows.Forms.Label label5;
+            System.Windows.Forms.Label lblSenhaValida;
+            System.Windows.Forms.Label lblSenhaValida2;
             System.Windows.Forms.Label label6;
             this.nomeTextBox = new System.Windows.Forms.TextBox();
             this.sobrenomeTextBox = new System.Windows.Forms.TextBox();
@@ -52,8 +52,8 @@
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
-            label4 = new System.Windows.Forms.Label();
-            label5 = new System.Windows.Forms.Label();
+            lblSenhaValida = new System.Windows.Forms.Label();
+            lblSenhaValida2 = new System.Windows.Forms.Label();
             label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fotoUsuarioPicBox)).BeginInit();
             this.SuspendLayout();
@@ -102,27 +102,27 @@
             label3.TabIndex = 29;
             label3.Text = "Endereço";
             // 
-            // label4
+            // lblSenhaValida
             // 
-            label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            label4.ForeColor = System.Drawing.Color.Black;
-            label4.Location = new System.Drawing.Point(46, 235);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(49, 17);
-            label4.TabIndex = 30;
-            label4.Text = "Senha";
+            lblSenhaValida.AutoSize = true;
+            lblSenhaValida.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            lblSenhaValida.ForeColor = System.Drawing.Color.Black;
+            lblSenhaValida.Location = new System.Drawing.Point(46, 235);
+            lblSenhaValida.Name = "lblSenhaValida";
+            lblSenhaValida.Size = new System.Drawing.Size(49, 17);
+            lblSenhaValida.TabIndex = 30;
+            lblSenhaValida.Text = "Senha";
             // 
-            // label5
+            // lblSenhaValida2
             // 
-            label5.AutoSize = true;
-            label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            label5.ForeColor = System.Drawing.Color.Black;
-            label5.Location = new System.Drawing.Point(46, 281);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(114, 17);
-            label5.TabIndex = 31;
-            label5.Text = "Confirmar Senha";
+            lblSenhaValida2.AutoSize = true;
+            lblSenhaValida2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            lblSenhaValida2.ForeColor = System.Drawing.Color.Black;
+            lblSenhaValida2.Location = new System.Drawing.Point(46, 281);
+            lblSenhaValida2.Name = "lblSenhaValida2";
+            lblSenhaValida2.Size = new System.Drawing.Size(114, 17);
+            lblSenhaValida2.TabIndex = 31;
+            lblSenhaValida2.Text = "Confirmar Senha";
             // 
             // label6
             // 
@@ -137,6 +137,7 @@
             // 
             // nomeTextBox
             // 
+            this.nomeTextBox.AccessibleName = "nome";
             this.nomeTextBox.ForeColor = System.Drawing.Color.Black;
             this.nomeTextBox.Location = new System.Drawing.Point(202, 56);
             this.nomeTextBox.Name = "nomeTextBox";
@@ -145,6 +146,7 @@
             // 
             // sobrenomeTextBox
             // 
+            this.sobrenomeTextBox.AccessibleName = "sobrenome";
             this.sobrenomeTextBox.ForeColor = System.Drawing.Color.Black;
             this.sobrenomeTextBox.Location = new System.Drawing.Point(348, 56);
             this.sobrenomeTextBox.Name = "sobrenomeTextBox";
@@ -153,6 +155,7 @@
             // 
             // enderecoTextBox
             // 
+            this.enderecoTextBox.AccessibleName = "endereco";
             this.enderecoTextBox.ForeColor = System.Drawing.Color.Black;
             this.enderecoTextBox.Location = new System.Drawing.Point(202, 99);
             this.enderecoTextBox.Name = "enderecoTextBox";
@@ -161,6 +164,7 @@
             // 
             // numTextBox
             // 
+            this.numTextBox.AccessibleName = "numero";
             this.numTextBox.ForeColor = System.Drawing.Color.Black;
             this.numTextBox.Location = new System.Drawing.Point(408, 99);
             this.numTextBox.Name = "numTextBox";
@@ -177,6 +181,7 @@
             // 
             // confirmarSenhaTextBox
             // 
+            this.confirmarSenhaTextBox.AccessibleName = "confirmarSenha";
             this.confirmarSenhaTextBox.ForeColor = System.Drawing.Color.Black;
             this.confirmarSenhaTextBox.Location = new System.Drawing.Point(202, 281);
             this.confirmarSenhaTextBox.Name = "confirmarSenhaTextBox";
@@ -185,6 +190,7 @@
             // 
             // senhaTextBox
             // 
+            this.senhaTextBox.AccessibleName = "senha";
             this.senhaTextBox.ForeColor = System.Drawing.Color.Black;
             this.senhaTextBox.Location = new System.Drawing.Point(202, 235);
             this.senhaTextBox.Name = "senhaTextBox";
@@ -193,6 +199,7 @@
             // 
             // usuarioTextBox
             // 
+            this.usuarioTextBox.AccessibleName = "usuario";
             this.usuarioTextBox.ForeColor = System.Drawing.Color.Black;
             this.usuarioTextBox.Location = new System.Drawing.Point(202, 187);
             this.usuarioTextBox.Name = "usuarioTextBox";
@@ -246,10 +253,10 @@
             this.button2.TabIndex = 52;
             this.button2.Text = "Cadastrar";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // NovoUsuario
             // 
+            this.AccessibleName = "senha";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
@@ -266,8 +273,8 @@
             this.Controls.Add(this.numTextBox);
             this.Controls.Add(this.enderecoTextBox);
             this.Controls.Add(this.sobrenomeTextBox);
-            this.Controls.Add(label5);
-            this.Controls.Add(label4);
+            this.Controls.Add(lblSenhaValida2);
+            this.Controls.Add(lblSenhaValida);
             this.Controls.Add(label3);
             this.Controls.Add(label2);
             this.Controls.Add(label1);
@@ -275,6 +282,7 @@
             this.Controls.Add(nomeLabel);
             this.Name = "NovoUsuario";
             this.Text = "Novo usuario - AirSystem";
+            this.Load += new System.EventHandler(this.NovoUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fotoUsuarioPicBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

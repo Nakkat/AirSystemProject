@@ -34,7 +34,7 @@
             this.tbxUsuario = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tbxSenha = new System.Windows.Forms.TextBox();
-            this.idiomaComboBox = new System.Windows.Forms.ComboBox();
+            this.cmbIdioma = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
@@ -99,23 +99,24 @@
             this.tbxSenha.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.tbxSenha.Location = new System.Drawing.Point(556, 259);
             this.tbxSenha.Name = "tbxSenha";
+            this.tbxSenha.PasswordChar = '*';
             this.tbxSenha.Size = new System.Drawing.Size(150, 20);
             this.tbxSenha.TabIndex = 13;
             this.tbxSenha.Text = "Digite sua senha...";
             this.tbxSenha.Enter += new System.EventHandler(this.tbxSenha_Enter);
             this.tbxSenha.Leave += new System.EventHandler(this.tbxSenha_Leave);
             // 
-            // idiomaComboBox
+            // cmbIdioma
             // 
-            this.idiomaComboBox.FormattingEnabled = true;
-            this.idiomaComboBox.Items.AddRange(new object[] {
+            this.cmbIdioma.FormattingEnabled = true;
+            this.cmbIdioma.Items.AddRange(new object[] {
             "Português - PT-BR",
             "Inglês - EN-US"});
-            this.idiomaComboBox.Location = new System.Drawing.Point(556, 325);
-            this.idiomaComboBox.Name = "idiomaComboBox";
-            this.idiomaComboBox.Size = new System.Drawing.Size(121, 21);
-            this.idiomaComboBox.TabIndex = 14;
-            this.idiomaComboBox.Text = "Português - PTBR";
+            this.cmbIdioma.Location = new System.Drawing.Point(556, 325);
+            this.cmbIdioma.Name = "cmbIdioma";
+            this.cmbIdioma.Size = new System.Drawing.Size(121, 21);
+            this.cmbIdioma.TabIndex = 14;
+            this.cmbIdioma.Text = "Português - PTBR";
             // 
             // label5
             // 
@@ -139,6 +140,7 @@
             this.btnEntrar.TabIndex = 17;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click_1);
             // 
             // btnSair
             // 
@@ -161,6 +163,7 @@
             this.btnNovoUsuario.TabIndex = 19;
             this.btnNovoUsuario.Text = "Novo Usuário";
             this.btnNovoUsuario.UseVisualStyleBackColor = true;
+            this.btnNovoUsuario.Click += new System.EventHandler(this.btnNovoUsuario_Click);
             // 
             // RelogioDigital
             // 
@@ -194,7 +197,7 @@
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.idiomaComboBox);
+            this.Controls.Add(this.cmbIdioma);
             this.Controls.Add(this.tbxSenha);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tbxUsuario);
@@ -220,7 +223,7 @@
         private System.Windows.Forms.TextBox tbxUsuario;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbxSenha;
-        private System.Windows.Forms.ComboBox idiomaComboBox;
+        private System.Windows.Forms.ComboBox cmbIdioma;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.Button btnSair;

@@ -81,13 +81,13 @@ namespace AirSystem.Views
             {
                 dgvListaUsuario.DataSource = null;
 
-                // filtra as lista recebida do repositório, verificando se o nome, 
-                // email, usuario, contém o que está no campo filtro.
-                dgvListaUsuario.DataSource = repository.buscarTodos().FindAll(x =>
-                    x.nome.ToUpper().Contains(filtroTextbox.Text.ToUpper()) ||
-                    x.sobrenome.ToUpper().Contains(filtroTextbox.Text.ToUpper()) ||
-                    x.usuario.ToUpper().Contains(filtroTextbox.Text.ToUpper())
-                );
+            // filtra as lista recebida do repositório, verificando se o nome, 
+            // email, usuario, contém o que está no campo filtro.
+            //dgvListaUsuario.DataSource = repository.buscarTodos().FindAll(x =>
+            //    x.nome.ToUpper().Contains(filtroTextbox.Text.ToUpper()) ||
+            //        x.sobrenome.ToUpper().Contains(filtroTextbox.Text.ToUpper()) ||
+            //        x.usuario.ToUpper().Contains(filtroTextbox.Text.ToUpper())
+            //    );
 
                 alterarContador();
 
@@ -95,7 +95,7 @@ namespace AirSystem.Views
         private void alterarContador()
         {
             //2 itens de 10
-            lblContador.Text = $"{dgvListaUsuario.RowCount} itens de {repository.buscarTodos().Count}";
+            //lblContador.Text = $"{dgvListaUsuario.RowCount} itens de {repository.buscarTodos().Count}";
         }
     }
     }
