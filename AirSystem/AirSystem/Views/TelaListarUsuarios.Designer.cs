@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Label nomeLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaListarUsuarios));
             System.Windows.Forms.Label label1;
             System.Windows.Forms.Label label2;
             System.Windows.Forms.Label label3;
@@ -36,7 +37,7 @@
             System.Windows.Forms.Label label5;
             System.Windows.Forms.Label label6;
             System.Windows.Forms.Label label7;
-            System.Windows.Forms.Label label8;
+            System.Windows.Forms.Label lblNome;
             System.Windows.Forms.Label label9;
             this.dgvListaUsuario = new System.Windows.Forms.DataGridView();
             this.filtroTextbox = new System.Windows.Forms.TextBox();
@@ -44,7 +45,6 @@
             this.btnVoltar = new System.Windows.Forms.Button();
             this.bntEditar = new System.Windows.Forms.Button();
             this.bntNovoUsuario = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.nomeTextBox = new System.Windows.Forms.TextBox();
             this.sobrenomeTextBox = new System.Windows.Forms.TextBox();
             this.enderecoTextBox = new System.Windows.Forms.TextBox();
@@ -56,6 +56,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.lblContador = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             nomeLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
@@ -64,7 +65,7 @@
             label5 = new System.Windows.Forms.Label();
             label6 = new System.Windows.Forms.Label();
             label7 = new System.Windows.Forms.Label();
-            label8 = new System.Windows.Forms.Label();
+            lblNome = new System.Windows.Forms.Label();
             label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,272 +73,183 @@
             // 
             // nomeLabel
             // 
-            nomeLabel.AutoSize = true;
-            nomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            resources.ApplyResources(nomeLabel, "nomeLabel");
             nomeLabel.ForeColor = System.Drawing.Color.Black;
-            nomeLabel.Location = new System.Drawing.Point(12, 365);
             nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(45, 17);
-            nomeLabel.TabIndex = 27;
-            nomeLabel.Text = "Nome";
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            resources.ApplyResources(label1, "label1");
             label1.ForeColor = System.Drawing.Color.Black;
-            label1.Location = new System.Drawing.Point(528, 9);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(122, 17);
-            label1.TabIndex = 54;
-            label1.Text = "Dados do Usuario";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            resources.ApplyResources(label2, "label2");
             label2.ForeColor = System.Drawing.Color.Black;
-            label2.Location = new System.Drawing.Point(308, 354);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(114, 17);
-            label2.TabIndex = 56;
-            label2.Text = "Confirmar Senha";
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            resources.ApplyResources(label3, "label3");
             label3.ForeColor = System.Drawing.Color.Black;
-            label3.Location = new System.Drawing.Point(308, 242);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(58, 17);
-            label3.TabIndex = 57;
-            label3.Text = "Número";
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            resources.ApplyResources(label4, "label4");
             label4.ForeColor = System.Drawing.Color.Black;
-            label4.Location = new System.Drawing.Point(308, 328);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(49, 17);
-            label4.TabIndex = 58;
-            label4.Text = "Senha";
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            resources.ApplyResources(label5, "label5");
             label5.ForeColor = System.Drawing.Color.Black;
-            label5.Location = new System.Drawing.Point(308, 271);
             label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(82, 17);
-            label5.TabIndex = 59;
-            label5.Text = "Nascimento";
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            resources.ApplyResources(label6, "label6");
             label6.ForeColor = System.Drawing.Color.Black;
-            label6.Location = new System.Drawing.Point(308, 301);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(57, 17);
-            label6.TabIndex = 60;
-            label6.Text = "Usuário";
             // 
             // label7
             // 
-            label7.AutoSize = true;
-            label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            resources.ApplyResources(label7, "label7");
             label7.ForeColor = System.Drawing.Color.Black;
-            label7.Location = new System.Drawing.Point(308, 212);
             label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(69, 17);
-            label7.TabIndex = 61;
-            label7.Text = "Endereço";
             // 
-            // label8
+            // lblNome
             // 
-            label8.AutoSize = true;
-            label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            label8.ForeColor = System.Drawing.Color.Black;
-            label8.Location = new System.Drawing.Point(308, 157);
-            label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(45, 17);
-            label8.TabIndex = 61;
-            label8.Text = "Nome";
+            resources.ApplyResources(lblNome, "lblNome");
+            lblNome.ForeColor = System.Drawing.Color.Black;
+            lblNome.Name = "lblNome";
             // 
             // label9
             // 
-            label9.AutoSize = true;
-            label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            resources.ApplyResources(label9, "label9");
             label9.ForeColor = System.Drawing.Color.Black;
-            label9.Location = new System.Drawing.Point(308, 184);
             label9.Name = "label9";
-            label9.Size = new System.Drawing.Size(81, 17);
-            label9.TabIndex = 62;
-            label9.Text = "Sobrenome";
             // 
             // dgvListaUsuario
             // 
+            resources.ApplyResources(this.dgvListaUsuario, "dgvListaUsuario");
             this.dgvListaUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaUsuario.Location = new System.Drawing.Point(1, 0);
             this.dgvListaUsuario.Name = "dgvListaUsuario";
-            this.dgvListaUsuario.Size = new System.Drawing.Size(240, 330);
-            this.dgvListaUsuario.TabIndex = 0;
+            this.dgvListaUsuario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaUsuario_CellClick);
             // 
             // filtroTextbox
             // 
+            resources.ApplyResources(this.filtroTextbox, "filtroTextbox");
             this.filtroTextbox.ForeColor = System.Drawing.Color.Black;
-            this.filtroTextbox.Location = new System.Drawing.Point(77, 365);
             this.filtroTextbox.Name = "filtroTextbox";
-            this.filtroTextbox.Size = new System.Drawing.Size(164, 20);
-            this.filtroTextbox.TabIndex = 28;
+            this.filtroTextbox.TextChanged += new System.EventHandler(this.filtroTextbox_TextChanged_1);
             // 
             // btnDeletar
             // 
-            this.btnDeletar.Location = new System.Drawing.Point(666, 405);
+            resources.ApplyResources(this.btnDeletar, "btnDeletar");
             this.btnDeletar.Name = "btnDeletar";
-            this.btnDeletar.Size = new System.Drawing.Size(51, 23);
-            this.btnDeletar.TabIndex = 50;
-            this.btnDeletar.Text = "Deletar";
             this.btnDeletar.UseVisualStyleBackColor = true;
             this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // btnVoltar
             // 
-            this.btnVoltar.Location = new System.Drawing.Point(439, 405);
+            resources.ApplyResources(this.btnVoltar, "btnVoltar");
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(53, 23);
-            this.btnVoltar.TabIndex = 51;
-            this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // bntEditar
             // 
-            this.bntEditar.Location = new System.Drawing.Point(600, 405);
+            resources.ApplyResources(this.bntEditar, "bntEditar");
             this.bntEditar.Name = "bntEditar";
-            this.bntEditar.Size = new System.Drawing.Size(46, 23);
-            this.bntEditar.TabIndex = 52;
-            this.bntEditar.Text = "Editar";
             this.bntEditar.UseVisualStyleBackColor = true;
+            this.bntEditar.Click += new System.EventHandler(this.bntEditar_Click);
             // 
             // bntNovoUsuario
             // 
-            this.bntNovoUsuario.Location = new System.Drawing.Point(531, 405);
+            resources.ApplyResources(this.bntNovoUsuario, "bntNovoUsuario");
             this.bntNovoUsuario.Name = "bntNovoUsuario";
-            this.bntNovoUsuario.Size = new System.Drawing.Size(50, 23);
-            this.bntNovoUsuario.TabIndex = 53;
-            this.bntNovoUsuario.Text = "Novo";
             this.bntNovoUsuario.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(491, 40);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(186, 84);
-            this.pictureBox1.TabIndex = 55;
-            this.pictureBox1.TabStop = false;
+            this.bntNovoUsuario.Click += new System.EventHandler(this.bntNovoUsuario_Click);
             // 
             // nomeTextBox
             // 
+            resources.ApplyResources(this.nomeTextBox, "nomeTextBox");
             this.nomeTextBox.ForeColor = System.Drawing.Color.Black;
-            this.nomeTextBox.Location = new System.Drawing.Point(491, 154);
             this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(186, 20);
-            this.nomeTextBox.TabIndex = 63;
             // 
             // sobrenomeTextBox
             // 
+            resources.ApplyResources(this.sobrenomeTextBox, "sobrenomeTextBox");
             this.sobrenomeTextBox.ForeColor = System.Drawing.Color.Black;
-            this.sobrenomeTextBox.Location = new System.Drawing.Point(491, 183);
             this.sobrenomeTextBox.Name = "sobrenomeTextBox";
-            this.sobrenomeTextBox.Size = new System.Drawing.Size(186, 20);
-            this.sobrenomeTextBox.TabIndex = 64;
             // 
             // enderecoTextBox
             // 
+            resources.ApplyResources(this.enderecoTextBox, "enderecoTextBox");
             this.enderecoTextBox.ForeColor = System.Drawing.Color.Black;
-            this.enderecoTextBox.Location = new System.Drawing.Point(491, 215);
             this.enderecoTextBox.Name = "enderecoTextBox";
-            this.enderecoTextBox.Size = new System.Drawing.Size(186, 20);
-            this.enderecoTextBox.TabIndex = 65;
             // 
             // numTextBox
             // 
+            resources.ApplyResources(this.numTextBox, "numTextBox");
             this.numTextBox.ForeColor = System.Drawing.Color.Black;
-            this.numTextBox.Location = new System.Drawing.Point(491, 241);
             this.numTextBox.Name = "numTextBox";
-            this.numTextBox.Size = new System.Drawing.Size(186, 20);
-            this.numTextBox.TabIndex = 66;
             // 
             // nascTextBox
             // 
+            resources.ApplyResources(this.nascTextBox, "nascTextBox");
             this.nascTextBox.ForeColor = System.Drawing.Color.Black;
-            this.nascTextBox.Location = new System.Drawing.Point(491, 270);
             this.nascTextBox.Name = "nascTextBox";
-            this.nascTextBox.Size = new System.Drawing.Size(186, 20);
-            this.nascTextBox.TabIndex = 67;
             // 
             // UsuarioTextBox
             // 
+            resources.ApplyResources(this.UsuarioTextBox, "UsuarioTextBox");
             this.UsuarioTextBox.ForeColor = System.Drawing.Color.Black;
-            this.UsuarioTextBox.Location = new System.Drawing.Point(491, 298);
             this.UsuarioTextBox.Name = "UsuarioTextBox";
-            this.UsuarioTextBox.Size = new System.Drawing.Size(186, 20);
-            this.UsuarioTextBox.TabIndex = 68;
             // 
             // senhaTextBox
             // 
+            resources.ApplyResources(this.senhaTextBox, "senhaTextBox");
             this.senhaTextBox.ForeColor = System.Drawing.Color.Black;
-            this.senhaTextBox.Location = new System.Drawing.Point(491, 325);
             this.senhaTextBox.Name = "senhaTextBox";
-            this.senhaTextBox.Size = new System.Drawing.Size(186, 20);
-            this.senhaTextBox.TabIndex = 69;
             // 
             // confirmarSenhaTextBox
             // 
+            resources.ApplyResources(this.confirmarSenhaTextBox, "confirmarSenhaTextBox");
             this.confirmarSenhaTextBox.ForeColor = System.Drawing.Color.Black;
-            this.confirmarSenhaTextBox.Location = new System.Drawing.Point(491, 351);
             this.confirmarSenhaTextBox.Name = "confirmarSenhaTextBox";
-            this.confirmarSenhaTextBox.Size = new System.Drawing.Size(186, 20);
-            this.confirmarSenhaTextBox.TabIndex = 70;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(718, 81);
+            resources.ApplyResources(this.button4, "button4");
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(50, 23);
-            this.button4.TabIndex = 71;
-            this.button4.Text = "Deletar";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.btnDeletarFt_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(718, 52);
+            resources.ApplyResources(this.button5, "button5");
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(50, 23);
-            this.button5.TabIndex = 72;
-            this.button5.Text = "Alterar";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // lblContador
             // 
-            this.lblContador.AutoSize = true;
-            this.lblContador.Location = new System.Drawing.Point(200, 410);
+            resources.ApplyResources(this.lblContador, "lblContador");
             this.lblContador.Name = "lblContador";
-            this.lblContador.Size = new System.Drawing.Size(41, 13);
-            this.lblContador.TabIndex = 73;
-            this.lblContador.Text = "label10";
+            // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
             // 
             // TelaListarUsuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblContador);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -350,7 +262,7 @@
             this.Controls.Add(this.sobrenomeTextBox);
             this.Controls.Add(this.nomeTextBox);
             this.Controls.Add(label9);
-            this.Controls.Add(label8);
+            this.Controls.Add(lblNome);
             this.Controls.Add(label7);
             this.Controls.Add(label6);
             this.Controls.Add(label5);
@@ -367,7 +279,7 @@
             this.Controls.Add(nomeLabel);
             this.Controls.Add(this.dgvListaUsuario);
             this.Name = "TelaListarUsuarios";
-            this.Text = "Listar usuários - AirSystem";
+            this.Load += new System.EventHandler(this.TelaListarUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

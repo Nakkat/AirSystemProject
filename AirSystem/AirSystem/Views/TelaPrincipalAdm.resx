@@ -117,4 +117,159 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnListarUsuarios.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="btnListarUsuarios.Location" type="System.Drawing.Point, System.Drawing">
+    <value>87, 83</value>
+  </data>
+  <data name="btnListarUsuarios.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 142</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnListarUsuarios.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnListarUsuarios.Text" xml:space="preserve">
+    <value>Listar usuários</value>
+  </data>
+  <data name="&gt;&gt;btnListarUsuarios.Name" xml:space="preserve">
+    <value>btnListarUsuarios</value>
+  </data>
+  <data name="&gt;&gt;btnListarUsuarios.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnListarUsuarios.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnListarUsuarios.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="bntListarAvioes.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="bntListarAvioes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>321, 83</value>
+  </data>
+  <data name="bntListarAvioes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 142</value>
+  </data>
+  <data name="bntListarAvioes.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="bntListarAvioes.Text" xml:space="preserve">
+    <value>Listar aviões</value>
+  </data>
+  <data name="&gt;&gt;bntListarAvioes.Name" xml:space="preserve">
+    <value>bntListarAvioes</value>
+  </data>
+  <data name="&gt;&gt;bntListarAvioes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bntListarAvioes.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;bntListarAvioes.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnGerenciarAviao.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="btnGerenciarAviao.Location" type="System.Drawing.Point, System.Drawing">
+    <value>558, 83</value>
+  </data>
+  <data name="btnGerenciarAviao.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 142</value>
+  </data>
+  <data name="btnGerenciarAviao.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnGerenciarAviao.Text" xml:space="preserve">
+    <value>Gerenciar avião</value>
+  </data>
+  <data name="&gt;&gt;btnGerenciarAviao.Name" xml:space="preserve">
+    <value>btnGerenciarAviao</value>
+  </data>
+  <data name="&gt;&gt;btnGerenciarAviao.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGerenciarAviao.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGerenciarAviao.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnGerenciarCompanhia.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="btnGerenciarCompanhia.Location" type="System.Drawing.Point, System.Drawing">
+    <value>87, 259</value>
+  </data>
+  <data name="btnGerenciarCompanhia.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 142</value>
+  </data>
+  <data name="btnGerenciarCompanhia.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btnGerenciarCompanhia.Text" xml:space="preserve">
+    <value>Gerenciar companhia</value>
+  </data>
+  <data name="&gt;&gt;btnGerenciarCompanhia.Name" xml:space="preserve">
+    <value>btnGerenciarCompanhia</value>
+  </data>
+  <data name="&gt;&gt;btnGerenciarCompanhia.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGerenciarCompanhia.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGerenciarCompanhia.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnGerenciarRelatorios.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="btnGerenciarRelatorios.Location" type="System.Drawing.Point, System.Drawing">
+    <value>321, 259</value>
+  </data>
+  <data name="btnGerenciarRelatorios.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 142</value>
+  </data>
+  <data name="btnGerenciarRelatorios.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btnGerenciarRelatorios.Text" xml:space="preserve">
+    <value>Gerenciar relatórios</value>
+  </data>
+  <data name="&gt;&gt;btnGerenciarRelatorios.Name" xml:space="preserve">
+    <value>btnGerenciarRelatorios</value>
+  </data>
+  <data name="&gt;&gt;btnGerenciarRelatorios.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGerenciarRelatorios.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGerenciarRelatorios.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>800, 450</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Tela Principal - AirSytem</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>TelaPrincipalAdm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

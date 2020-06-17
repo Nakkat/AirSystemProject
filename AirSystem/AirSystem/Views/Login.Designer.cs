@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.Relogio = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tbxUsuario = new System.Windows.Forms.TextBox();
@@ -48,61 +49,33 @@
             // 
             // Relogio
             // 
-            this.Relogio.AutoSize = true;
-            this.Relogio.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Relogio.Location = new System.Drawing.Point(665, 9);
+            resources.ApplyResources(this.Relogio, "Relogio");
             this.Relogio.Name = "Relogio";
-            this.Relogio.Size = new System.Drawing.Size(90, 25);
-            this.Relogio.TabIndex = 2;
-            this.Relogio.Text = "08:33:22";
             // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(552, 166);
+            resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 25);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Usuário";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tbxUsuario
             // 
-            this.tbxUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            resources.ApplyResources(this.tbxUsuario, "tbxUsuario");
             this.tbxUsuario.BackColor = System.Drawing.SystemColors.Window;
             this.tbxUsuario.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.tbxUsuario.Location = new System.Drawing.Point(556, 194);
             this.tbxUsuario.Name = "tbxUsuario";
-            this.tbxUsuario.Size = new System.Drawing.Size(150, 20);
-            this.tbxUsuario.TabIndex = 11;
-            this.tbxUsuario.Text = "Digite seu nome...";
             this.tbxUsuario.Enter += new System.EventHandler(this.tbxUsuario_Enter);
             this.tbxUsuario.Leave += new System.EventHandler(this.tbxUsuario_Leave);
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(552, 231);
+            resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 25);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Senha";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tbxSenha
             // 
-            this.tbxSenha.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            resources.ApplyResources(this.tbxSenha, "tbxSenha");
             this.tbxSenha.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.tbxSenha.Location = new System.Drawing.Point(556, 259);
             this.tbxSenha.Name = "tbxSenha";
-            this.tbxSenha.PasswordChar = '*';
-            this.tbxSenha.Size = new System.Drawing.Size(150, 20);
-            this.tbxSenha.TabIndex = 13;
-            this.tbxSenha.Text = "Digite sua senha...";
             this.tbxSenha.Enter += new System.EventHandler(this.tbxSenha_Enter);
             this.tbxSenha.Leave += new System.EventHandler(this.tbxSenha_Leave);
             // 
@@ -110,58 +83,38 @@
             // 
             this.cmbIdioma.FormattingEnabled = true;
             this.cmbIdioma.Items.AddRange(new object[] {
-            "Português - PT-BR",
-            "Inglês - EN-US"});
-            this.cmbIdioma.Location = new System.Drawing.Point(556, 325);
+            resources.GetString("cmbIdioma.Items"),
+            resources.GetString("cmbIdioma.Items1")});
+            resources.ApplyResources(this.cmbIdioma, "cmbIdioma");
             this.cmbIdioma.Name = "cmbIdioma";
-            this.cmbIdioma.Size = new System.Drawing.Size(121, 21);
-            this.cmbIdioma.TabIndex = 14;
-            this.cmbIdioma.Text = "Português - PTBR";
+            this.cmbIdioma.SelectedIndexChanged += new System.EventHandler(this.cmbIdioma_SelectedIndexChanged);
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(552, 297);
+            resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 25);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Idioma";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnEntrar
             // 
-            this.btnEntrar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            resources.ApplyResources(this.btnEntrar, "btnEntrar");
             this.btnEntrar.ForeColor = System.Drawing.Color.Black;
-            this.btnEntrar.Location = new System.Drawing.Point(556, 390);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(49, 23);
-            this.btnEntrar.TabIndex = 17;
-            this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = true;
-            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click_1);
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // btnSair
             // 
-            this.btnSair.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            resources.ApplyResources(this.btnSair, "btnSair");
             this.btnSair.ForeColor = System.Drawing.Color.Black;
-            this.btnSair.Location = new System.Drawing.Point(611, 390);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(48, 23);
-            this.btnSair.TabIndex = 18;
-            this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click_1);
             // 
             // btnNovoUsuario
             // 
-            this.btnNovoUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            resources.ApplyResources(this.btnNovoUsuario, "btnNovoUsuario");
             this.btnNovoUsuario.ForeColor = System.Drawing.Color.Black;
-            this.btnNovoUsuario.Location = new System.Drawing.Point(677, 390);
             this.btnNovoUsuario.Name = "btnNovoUsuario";
-            this.btnNovoUsuario.Size = new System.Drawing.Size(90, 23);
-            this.btnNovoUsuario.TabIndex = 19;
-            this.btnNovoUsuario.Text = "Novo Usuário";
             this.btnNovoUsuario.UseVisualStyleBackColor = true;
             this.btnNovoUsuario.Click += new System.EventHandler(this.btnNovoUsuario_Click);
             // 
@@ -173,26 +126,21 @@
             // loginPictureBox
             // 
             this.loginPictureBox.Image = global::AirSystem.Properties.Resources.logotipo_airsystem;
-            this.loginPictureBox.Location = new System.Drawing.Point(409, 37);
+            resources.ApplyResources(this.loginPictureBox, "loginPictureBox");
             this.loginPictureBox.Name = "loginPictureBox";
-            this.loginPictureBox.Size = new System.Drawing.Size(358, 128);
-            this.loginPictureBox.TabIndex = 4;
             this.loginPictureBox.TabStop = false;
             // 
             // userPictureBox
             // 
             this.userPictureBox.Image = global::AirSystem.Properties.Resources.download;
-            this.userPictureBox.Location = new System.Drawing.Point(121, 124);
+            resources.ApplyResources(this.userPictureBox, "userPictureBox");
             this.userPictureBox.Name = "userPictureBox";
-            this.userPictureBox.Size = new System.Drawing.Size(226, 222);
-            this.userPictureBox.TabIndex = 0;
             this.userPictureBox.TabStop = false;
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnNovoUsuario);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnEntrar);
@@ -207,7 +155,7 @@
             this.Controls.Add(this.userPictureBox);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Login";
-            this.Text = "Login - AirSystem";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.loginPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userPictureBox)).EndInit();

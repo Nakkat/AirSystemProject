@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaPrincipalComum));
             this.btnGerenciarRelatorios = new System.Windows.Forms.Button();
             this.btnListarAvioes = new System.Windows.Forms.Button();
             this.btnGerenciarAviao = new System.Windows.Forms.Button();
@@ -36,55 +37,39 @@
             // 
             // btnGerenciarRelatorios
             // 
-            this.btnGerenciarRelatorios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnGerenciarRelatorios.Location = new System.Drawing.Point(423, 259);
+            resources.ApplyResources(this.btnGerenciarRelatorios, "btnGerenciarRelatorios");
             this.btnGerenciarRelatorios.Name = "btnGerenciarRelatorios";
-            this.btnGerenciarRelatorios.Size = new System.Drawing.Size(172, 142);
-            this.btnGerenciarRelatorios.TabIndex = 9;
-            this.btnGerenciarRelatorios.Text = "Gerenciar relatórios";
             this.btnGerenciarRelatorios.UseVisualStyleBackColor = true;
             // 
             // btnListarAvioes
             // 
-            this.btnListarAvioes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnListarAvioes.Location = new System.Drawing.Point(189, 68);
+            resources.ApplyResources(this.btnListarAvioes, "btnListarAvioes");
             this.btnListarAvioes.Name = "btnListarAvioes";
-            this.btnListarAvioes.Size = new System.Drawing.Size(172, 142);
-            this.btnListarAvioes.TabIndex = 6;
-            this.btnListarAvioes.Text = "Listar aviões";
             this.btnListarAvioes.UseVisualStyleBackColor = true;
             // 
             // btnGerenciarAviao
             // 
-            this.btnGerenciarAviao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnGerenciarAviao.Location = new System.Drawing.Point(423, 68);
+            resources.ApplyResources(this.btnGerenciarAviao, "btnGerenciarAviao");
             this.btnGerenciarAviao.Name = "btnGerenciarAviao";
-            this.btnGerenciarAviao.Size = new System.Drawing.Size(172, 142);
-            this.btnGerenciarAviao.TabIndex = 7;
-            this.btnGerenciarAviao.Text = "Gerenciar avião";
             this.btnGerenciarAviao.UseVisualStyleBackColor = true;
             // 
             // btnGerenciarCompanhia
             // 
-            this.btnGerenciarCompanhia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnGerenciarCompanhia.Location = new System.Drawing.Point(189, 259);
+            resources.ApplyResources(this.btnGerenciarCompanhia, "btnGerenciarCompanhia");
             this.btnGerenciarCompanhia.Name = "btnGerenciarCompanhia";
-            this.btnGerenciarCompanhia.Size = new System.Drawing.Size(172, 142);
-            this.btnGerenciarCompanhia.TabIndex = 8;
-            this.btnGerenciarCompanhia.Text = "Gerenciar companhia";
             this.btnGerenciarCompanhia.UseVisualStyleBackColor = true;
             // 
             // TelaPrincipalComum
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnGerenciarRelatorios);
             this.Controls.Add(this.btnGerenciarCompanhia);
             this.Controls.Add(this.btnGerenciarAviao);
             this.Controls.Add(this.btnListarAvioes);
             this.Name = "TelaPrincipalComum";
-            this.Text = "TelaPrincipalComum";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TelaPrincipalComum_FormClosing);
+            this.Load += new System.EventHandler(this.TelaPrincipalComum_Load);
             this.ResumeLayout(false);
 
         }

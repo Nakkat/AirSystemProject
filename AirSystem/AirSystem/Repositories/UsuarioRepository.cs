@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 public class UsuarioRepository
 {
@@ -23,16 +24,28 @@ public class UsuarioRepository
             usuarios.Add(new Usuario
             {
                 ID = 1,
-                nome = "Erik",
-                sobrenome = "Vitelli"
+                nome = "Bruno",
+                sobrenome = "Nakamura",
+                dataNascimento = Convert.ToDateTime("15/05/2002"),
+                endereco = "Tijuco Preto",
+                numero = "255",
+                usuario = "adm",
+                senha = "adm",
+                tipoUsuario = true
             }
            );
             contador++;
             usuarios.Add(new Usuario
             {
                 ID = 2,
-                nome = "Bruno",
-                sobrenome = "Nakamura"
+                nome = "Fernanda",
+                sobrenome = "Isola",
+                dataNascimento = Convert.ToDateTime("03/04/2001"),
+                endereco = "Tijuco Preto",
+                numero = "255",
+                usuario = "comum",
+                senha = "comum",
+                tipoUsuario = false
             }
             );
             contador++;
@@ -42,6 +55,21 @@ public class UsuarioRepository
     public List<Usuario> buscarTodos()
     {
         return usuarios;
+    }
+
+    public Usuario BuscarPorId(int id)
+    {
+        return usuarios.FirstOrDefault(u => u.ID == id);
+    }
+    public void Deletar(int id)
+    {
+        Usuario u = BuscarPorId(id);
+        usuarios.Remove(u);
+    }
+
+    public Usuario login (string username, string pass)
+    {
+        return usuarios.Find(u => u.usuario == username && u.senha == pass);
     }
     // Método que irá adicionar usuários
     public void adicionar(Usuario usuario)
@@ -61,16 +89,6 @@ public class UsuarioRepository
         // pegar a posição o objeto dentro da lista
         Usuario u = usuarios.Find(x => x.ID == usuario.ID);
         usuarios[usuarios.IndexOf(u)] = usuario;
-    }
-
-    // Remove dados da lista
-    public void deletar(int ID)
-    {
-        // Recupero o usuário atraves do código
-        Usuario usuario = usuarios.Find(x => x.ID == ID);
-
-        // Removo o usuário da lista;
-        usuarios.Remove(usuario);
     }
 }
 
